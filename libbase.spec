@@ -1,6 +1,6 @@
 Name: libbase
 Version: 1.1.3
-Release: 10%{?dist}
+Release: 8%{?dist}
 Summary: JFree Base Services
 License: LGPLv2
 Group: System Environment/Libraries
@@ -9,7 +9,7 @@ Group: System Environment/Libraries
 #to simplify the licensing
 Source: %{name}-%{version}-jarsdeleted.zip
 URL: http://reporting.pentaho.org/
-BuildRequires: ant, ant-contrib, java-devel, jpackage-utils, apache-commons-logging
+BuildRequires: ant, ant-contrib, ant-nodeps, java-devel, jpackage-utils, apache-commons-logging
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: java, jpackage-utils, apache-commons-logging
 BuildArch: noarch
@@ -68,12 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_javadocdir}/%{name}
 
 %changelog
-* Wed Jan 08 2014 Caolán McNamara <caolanm@redhat.com> - 1.1.3-10
-- Resolves: rhbz#1038176 build requires need adjusting
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.1.3-9
-- Mass rebuild 2013-12-27
-
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1.3-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
@@ -98,7 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 * Thu Dec 03 2009 Caolan McNamara <caolanm@redhat.com> 1.1.3-1
 - latest version
 
-* Tue Nov 17 2009 Caolan McNamara <caolanm@redhat.com> 1.1.2-1
+* Thu Nov 17 2009 Caolan McNamara <caolanm@redhat.com> 1.1.2-1
 - latest version
 
 * Fri Jul 24 2009 Caolan McNamara <caolanm@redhat.com> 1.0.0-3.OOo31
